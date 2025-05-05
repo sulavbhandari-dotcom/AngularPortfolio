@@ -1,0 +1,35 @@
+.introductionDiv {
+  display: flex;
+  flex-direction : column;
+  background-color: #242B26;
+  margin-top: -150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.intro-heading {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: #CDBE93;
+  font-size: 100px;
+  margin: 1px;
+}
+.intro-text {
+  background-image: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  background-clip: text;
+  color: transparent; /* Makes the text transparent */
+  font-size: 50px;
+}
+
+.intro-heading::after {
+  content: " ";
+  flex-grow: 1;
+  margin-left: 35px;
+  margin-right: -150px;
+  border-radius : 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #CDBE93 0%,#242B26 100%);
+}

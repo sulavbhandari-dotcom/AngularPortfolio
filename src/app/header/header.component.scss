@@ -1,0 +1,22 @@
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top : 10px;
+}
+
+.header-logo {
+  max-width: 100%;
+  height: auto;
+  margin-left : 20px;
+  margin-right : 20px;
+}
+
+.header-div::before,
+.header-div::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #AA841A;
+}
