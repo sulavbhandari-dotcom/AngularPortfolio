@@ -23,4 +23,4 @@ npm run build      # production build → dist/hotelinventoryapp/browser
 
 Every push to `main` builds and deploys via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
-The site is served from the `/AngularPortfolio/` sub-path, so `build:gh-pages` sets that base href. No custom domain should be set under **Settings → Pages**.
+`build:gh-pages` uses a relative base href (`./`), so the same build works at https://sulavbhandari-dotcom.github.io/AngularPortfolio/ and at the custom domain https://bhandarisulav.com.np/ (set under **Settings → Pages → Custom domain**).
