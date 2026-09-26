@@ -2,7 +2,7 @@
 
 Personal portfolio built with Angular 19, prerendered to static HTML and hosted on GitHub Pages.
 
-**Live:** https://sulavbhandari.com/
+**Live:** https://sulavbhandari-dotcom.github.io/AngularPortfolio/
 
 ## Editing content
 
@@ -21,4 +21,4 @@ npm run build      # production build → dist/hotelinventoryapp/browser
 
 Every push to `main` builds and deploys via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
-The site is served at the root of the custom domain `sulavbhandari.com` (see `public/CNAME` and **Settings → Pages**), so it builds with the default base href `/`.
+The site is served from the `/AngularPortfolio/` sub-path, so `build:gh-pages` sets that base href. No custom domain should be set under **Settings → Pages**.
