@@ -234,12 +234,24 @@ html.is-loading .mask .line-inner { translate: 0 110%; }
  * so a component-level `animation: foo` there would point at nothing.
  */
 @keyframes drive-rise {
-  from { translate: 0 90px; }
-  to { translate: 0 -90px; }
+  from { translate: 0 70px; }
+  to { translate: 0 -50px; }
 }
-@keyframes drive-glow {
-  from { scale: 1.08; opacity: 1; }
-  to { scale: 0.85; opacity: 0.55; }
+@keyframes car-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes car-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes wheel-spin {
+  from { rotate: 0deg; }
+  to { rotate: 540deg; }
+}
+@keyframes road-run {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
 }
 @keyframes timeline-fill { to { transform: scaleY(1); } }
 
