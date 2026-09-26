@@ -9,9 +9,9 @@
       <span>{{ profile.availability }}</span>
     </div>
 
-    <h1 class="display headline">
-      <span class="line reveal" style="--d: .08s">From idea</span>
-      <span class="line reveal" style="--d: .16s">to <span class="gold-text">production.</span></span>
+    <h1 class="display headline mask">
+      <span class="line"><span class="line-inner" style="--d: .1s">From idea</span></span>
+      <span class="line"><span class="line-inner" style="--d: .22s">to <span class="gold-text">production.</span></span></span>
     </h1>
 
     <div class="sub reveal" style="--d: .28s">
@@ -29,14 +29,14 @@
     </div>
 
     <div class="actions reveal" style="--d: .38s">
-      <a href="#contact" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
-      <a href="#experience" class="btn">See my work</a>
+      <a href="#contact" class="btn btn-primary" data-magnetic>Start a project <span class="arrow">→</span></a>
+      <a href="#experience" class="btn" data-magnetic>See my work</a>
     </div>
 
     <dl class="stats">
       @for (stat of profile.stats; track stat.label; let i = $index) {
         <div class="stat reveal" [style.--d]="0.5 + i * 0.1 + 's'">
-          <dt class="display">{{ stat.value }}</dt>
+          <dt class="display" data-count>{{ stat.value }}</dt>
           <dd>{{ stat.label }}</dd>
         </div>
       }

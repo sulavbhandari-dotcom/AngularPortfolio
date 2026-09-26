@@ -12,19 +12,19 @@
       </div>
 
       <aside class="cards">
-        <div class="card spotlight reveal" style="--d: .1s">
+        <div class="card spotlight reveal" data-tilt style="--d: .1s">
           <span class="label">Based in</span>
           <strong>{{ profile.location }}</strong>
           <span class="flag" aria-hidden="true">
             <svg viewBox="0 0 24 30" width="22" height="28"><path d="M1 1 L20 14 H8 L21 29 H1 Z" fill="#DC143C" stroke="#003893" stroke-width="2" stroke-linejoin="round"/></svg>
           </span>
         </div>
-        <div class="card spotlight reveal" style="--d: .18s">
+        <div class="card spotlight reveal" data-tilt style="--d: .18s">
           <span class="label">Education</span>
           <strong>{{ profile.education.school }}</strong>
           <span class="meta">{{ profile.education.location }}</span>
         </div>
-        <div class="card spotlight quest reveal" style="--d: .26s">
+        <div class="card spotlight quest reveal" data-tilt style="--d: .26s">
           <span class="label"><span class="live"></span>Side quest</span>
           <strong>{{ profile.sideQuest }}</strong>
         </div>

@@ -9,6 +9,8 @@ Personal portfolio built with Angular 19, prerendered to static HTML and hosted 
 All text — headline, about, services, experience, stack, links — lives in
 [`src/app/data/profile.ts`](src/app/data/profile.ts). Change it there and every section updates.
 
+The preloader in `src/index.html` is an inline SVG traced from `public/logo.png`; if the logo changes, the SVG paths need regenerating.
+
 ## Development
 
 ```bash

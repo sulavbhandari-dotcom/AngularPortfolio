@@ -6,16 +6,40 @@
   padding: 0;
   position: relative;
 
-  &::before {
+  view-timeline: --journey block;
+
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     top: 8px;
     bottom: 8px;
     left: 200px;
     width: 1px;
-    background: linear-gradient(var(--gold), var(--line) 60%, transparent);
+  }
+  &::before { background: linear-gradient(var(--line-strong), var(--line) 80%, transparent); }
+  &::after {
+    width: 2px;
+    margin-left: -0.5px;
+    background: linear-gradient(var(--gold), var(--porsche));
+    box-shadow: 0 0 12px rgba(212, 167, 44, 0.5);
+    transform-origin: top;
+    transform: scaleY(0);
   }
 }
+
+/* Gold line fills as you scroll through the timeline */
+@supports (animation-timeline: view()) {
+  .timeline::after {
+    animation: fill-line linear both;
+    animation-timeline: --journey;
+    animation-range: entry 40% exit 40%;
+  }
+}
+@supports not (animation-timeline: view()) {
+  .timeline::after { transform: none; transition: transform 2s var(--ease); }
+}
+@keyframes fill-line { to { transform: scaleY(1); } }
 
 .item {
   display: grid;
@@ -54,7 +78,13 @@
   border: 2px solid var(--gold);
   box-shadow: 0 0 0 6px rgba(212, 167, 44, 0.1);
   position: relative;
+  z-index: 1;
   left: 0.5px;
+  transition: background 0.6s var(--ease) 0.3s, box-shadow 0.6s var(--ease) 0.3s;
+}
+.item.is-visible .node {
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(212, 167, 44, 0.16), 0 0 18px rgba(212, 167, 44, 0.6);
 }
 
 .what {
@@ -95,7 +125,8 @@
 .loc { font-size: 13px; color: var(--muted); padding-top: 6px; }
 
 @media (max-width: 760px) {
-  .timeline::before { left: 6px; }
+  .timeline::before,
+  .timeline::after { left: 6px; }
   .item { grid-template-columns: 13px 1fr; column-gap: 20px; }
   .when {
     grid-column: 2;

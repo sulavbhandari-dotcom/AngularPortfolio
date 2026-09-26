@@ -9,7 +9,7 @@
 
     <div class="grid">
       @for (service of profile.services; track service.title; let i = $index) {
-        <article class="tile spotlight reveal" [style.--d]="i * 0.08 + 's'">
+        <article class="tile spotlight reveal" data-tilt [style.--d]="i * 0.08 + 's'">
           <div class="tile-top">
             <span class="num display">0{{ i + 1 }}</span>
             <span class="icon" aria-hidden="true">{{ service.icon }}</span>

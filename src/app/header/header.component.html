@@ -5,8 +5,20 @@
     </a>
 
     <nav class="links" aria-label="Primary">
+      <span
+        class="pill"
+        aria-hidden="true"
+        [class.on]="pill()"
+        [style.translate]="(pill()?.x ?? 0) + 'px 0'"
+        [style.width.px]="pill()?.w ?? 0"
+      ></span>
       @for (link of links; track link.href) {
-        <a [href]="link.href" (click)="close()">{{ link.label }}</a>
+        <a
+          [href]="link.href"
+          [class.active]="active() === link.href"
+          [attr.aria-current]="active() === link.href ? 'location' : null"
+          (click)="close()"
+        >{{ link.label }}</a>
       }
       <a href="#contact" class="btn btn-primary cta" (click)="close()">Let's talk <span class="arrow">→</span></a>
     </nav>
