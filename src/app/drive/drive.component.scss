@@ -1,10 +1,10 @@
 .drive {
   position: relative;
-  padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 8vw, 120px);
-  /* clip, not hidden: hidden would make this a scroll container and freeze the view() timeline */
+  padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 8vw, 110px);
+  /* clip, not hidden: hidden would make this a scroll container and freeze the view() timelines */
   overflow: clip;
   background:
-    radial-gradient(ellipse 60% 45% at 50% 75%, rgba(245, 196, 0, 0.16), transparent 70%),
+    radial-gradient(ellipse 60% 45% at 50% 80%, rgba(212, 167, 44, 0.1), transparent 70%),
     var(--bg);
   text-align: center;
 }
@@ -22,73 +22,119 @@
   &:hover { transform: rotate(-2deg) translateY(10px); }
 }
 
-.road {
+.stage {
   position: relative;
-  width: min(1200px, 92vw);
-  margin: clamp(-100px, -6vw, -30px) auto 0;
+  width: min(1100px, 90vw);
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  view-timeline: --car block;
+}
+
+.glow {
+  position: absolute;
+  inset: 25% 8% 0;
+  background: radial-gradient(ellipse at 50% 75%, rgba(212, 167, 44, 0.16), transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
 }
 
 .car {
   position: relative;
-  z-index: 2;
+  display: block;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.7));
+  overflow: visible;
+  translate: 0 var(--rise, 0px);
 }
 
-.shadow {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 4%;
-  height: 10%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(245, 196, 0, 0.35), transparent 70%);
-  filter: blur(20px);
+.art {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px rgba(212, 167, 44, 0.35));
+  transition: filter 0.6s var(--ease);
+}
+.stage:hover .art { filter: drop-shadow(0 0 12px rgba(212, 167, 44, 0.6)); }
+
+/* Every stroke has pathLength="1"; --draw 0..1 reveals it (defaults to fully drawn) */
+.ln {
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--draw, 1));
+}
+.rim, .spokes { stroke-opacity: 0.5; }
+.spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  rotate: var(--spin, 0deg);
 }
 
-.speed {
-  position: absolute;
-  inset: 20% -20% 25%;
-  z-index: 1;
-  background: repeating-linear-gradient(
-    180deg,
-    transparent 0 18px,
-    rgba(205, 190, 147, 0.18) 18px 19px
-  );
-  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 40%, transparent 70%);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 40%, transparent 70%);
-  opacity: 0.35;
+.road { stroke-width: 1.5; }
+.road-light {
+  stroke: #fff1b8;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0.08 0.92;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 6px rgba(255, 220, 120, 0.8));
+  animation: road-run 5s linear infinite;
+}
+
+.caption {
+  margin-top: 26px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 @media (max-width: 720px) {
-  .road { margin-top: 24px; }
+  .art { stroke-width: 4; }
+  .road { stroke-width: 2.5; }
+  .road-light { stroke-width: 3.5; }
 }
 
 /*
- * The car drifts gently upward as the section scrolls past, and its glow
- * tightens a little as it "lifts". Uses a native scroll timeline where
- * supported; drive.component.ts sets --rise / --glow as a fallback.
+ * Scroll-linked: the car rises gently, draws itself (body, then wheels, then
+ * details), and the wheels roll. Keyframes live in styles.scss (see note there).
+ * drive.component.ts drives --rise / --spin where view timelines aren't supported.
  */
-.car { translate: 0 var(--rise, 0px); }
-.shadow {
-  scale: var(--glow, 1);
-  opacity: calc(0.6 + (var(--glow, 1) - 0.85) * 2);
-}
-
 @supports (animation-timeline: view()) {
   .car {
     animation: drive-rise linear both;
-    animation-timeline: view();
+    animation-timeline: --car;
     animation-range: cover 0% cover 100%;
   }
-  .shadow {
-    animation: drive-glow linear both;
-    animation-timeline: view();
+  .body {
+    animation: car-draw linear both;
+    animation-timeline: --car;
+    animation-range: entry 0% cover 42%;
+  }
+  .tire, .rim, .hub {
+    animation: car-draw linear both;
+    animation-timeline: --car;
+    animation-range: entry 35% cover 48%;
+  }
+  .spokes {
+    animation: car-fade linear both;
+    animation-timeline: --car;
+    animation-range: cover 30% cover 48%;
+  }
+  .detail {
+    animation: car-draw linear both;
+    animation-timeline: --car;
+    animation-range: entry 60% cover 52%;
+  }
+  .spin {
+    animation: wheel-spin linear both;
+    animation-timeline: --car;
     animation-range: cover 0% cover 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .car, .shadow { animation: none; translate: none; scale: none; }
+  .car, .ln, .spokes, .spin, .road-light { animation: none; }
+  .car { translate: none; }
+  .road-light { display: none; }
 }
