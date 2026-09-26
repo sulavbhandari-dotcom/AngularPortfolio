@@ -1,4 +1,18 @@
-<div class="header-div">
+<header class="nav" [class.scrolled]="scrolled()" [class.open]="menuOpen()">
+  <div class="nav-inner">
+    <a href="#top" class="brand" (click)="close()" aria-label="Sulav Bhandari — home">
+      <img src="logo.png" alt="Sulav Bhandari — software engineer" width="1167" height="412">
+    </a>
 
-  <img class="header-logo" src= "/logo.png" alt="logo" width="250">
-</div>
+    <nav class="links" aria-label="Primary">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="close()">{{ link.label }}</a>
+      }
+      <a href="#contact" class="btn btn-primary cta" (click)="close()">Let's talk <span class="arrow">→</span></a>
+    </nav>
+
+    <button class="burger" type="button" (click)="toggle()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>

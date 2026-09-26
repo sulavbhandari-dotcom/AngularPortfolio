@@ -1,17 +1,34 @@
+<section class="section about" id="about">
+  <div class="container">
+    <span class="eyebrow reveal">About</span>
+    <h2 class="display section-title reveal">Who is Sulav?</h2>
 
-<div class="introductionDiv">
-<div class="karantina-regular intro-heading">
-  WHO IS SULAV ? 
-</div>
+    <div class="layout">
+      <div class="copy">
+        <p class="lead reveal">{{ profile.about[0] }}</p>
+        @for (para of profile.about.slice(1); track $index) {
+          <p class="body reveal">{{ para }}</p>
+        }
+      </div>
 
-<p class="karantina-regular intro-text">
-  TECH EXPLORER | .NET | AR + AI | UI/UX |
-  <br />
-  <br />
-  BLENDING DESIGN, DEVELOPMENT, AND AI, I CRAFT SEAMLESS UI/UX, BUILD FULL-STACK .NET SOLUTIONS, AND EXPLORE AR + AI INNOVATIONS. FROM E-COMMERCE INTERFACES TO MACHINE LEARNING MODELS, I THRIVE ON TURNING IDEAS INTO REALITY. CURRENTLY WORKING ON AN AR-BASED TOURIST GUIDE FOR NEPAL  !
-  <br />
-  <br />
-  LET’S INNOVATE AND CREATE! ✨
-</p>
-
-</div>
+      <aside class="cards">
+        <div class="card spotlight reveal" style="--d: .1s">
+          <span class="label">Based in</span>
+          <strong>{{ profile.location }}</strong>
+          <span class="flag" aria-hidden="true">
+            <svg viewBox="0 0 24 30" width="22" height="28"><path d="M1 1 L20 14 H8 L21 29 H1 Z" fill="#DC143C" stroke="#003893" stroke-width="2" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="card spotlight reveal" style="--d: .18s">
+          <span class="label">Education</span>
+          <strong>{{ profile.education.school }}</strong>
+          <span class="meta">{{ profile.education.location }}</span>
+        </div>
+        <div class="card spotlight quest reveal" style="--d: .26s">
+          <span class="label"><span class="live"></span>Side quest</span>
+          <strong>{{ profile.sideQuest }}</strong>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

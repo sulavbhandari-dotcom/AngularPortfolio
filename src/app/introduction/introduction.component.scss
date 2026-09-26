@@ -1,35 +1,66 @@
-.introductionDiv {
-  display: flex;
-  flex-direction : column;
-  background-color: #242B26;
-  margin-top: -150px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 150px;
-  padding-right: 150px;
+.about { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
+
+.layout {
+  margin-top: clamp(40px, 6vw, 72px);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
 }
 
-.intro-heading {
-  display: flex;
-  position: relative;
-  align-items: center;
-  color: #CDBE93;
-  font-size: 100px;
-  margin: 1px;
-}
-.intro-text {
-  background-image: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+.lead {
+  font-size: clamp(26px, 3.2vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  background: linear-gradient(90deg, #ffffff 0%, #9a9a9a 100%);
+  -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Makes the text transparent */
-  font-size: 50px;
+  color: transparent;
 }
 
-.intro-heading::after {
-  content: " ";
-  flex-grow: 1;
-  margin-left: 35px;
-  margin-right: -150px;
-  border-radius : 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #CDBE93 0%,#242B26 100%);
+.body {
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 640px;
+}
+
+.cards { display: grid; gap: 14px; }
+
+.card {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &:hover { transform: translateY(-3px); }
+  strong { font-size: 19px; font-weight: 600; line-height: 1.35; }
+}
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.meta { color: var(--muted); font-size: 14px; }
+.flag { position: absolute; top: 22px; right: 24px; }
+
+.quest {
+  background: linear-gradient(135deg, rgba(212, 167, 44, 0.12), var(--surface) 60%);
+}
+.live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: blink 1.6s ease-in-out infinite;
+}
+@keyframes blink { 50% { opacity: 0.2; } }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
 }

@@ -1,0 +1,30 @@
+.stack { background: var(--bg-2); }
+
+.chips {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 14px 28px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--sand);
+  cursor: default;
+  transition: background 0.4s var(--ease), color 0.4s, border-color 0.4s, transform 0.4s var(--ease);
+
+  &:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #140f02;
+    transform: rotate(-3deg) scale(1.04);
+  }
+}

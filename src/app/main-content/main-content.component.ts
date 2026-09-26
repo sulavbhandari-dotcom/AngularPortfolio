@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PROFILE } from '../data/profile';
 
 @Component({
   selector: 'app-main-content',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
-
+  profile = PROFILE;
+  // First role is repeated at the end so the vertical ticker loops seamlessly.
+  roles = [...PROFILE.roles, PROFILE.roles[0]];
 }

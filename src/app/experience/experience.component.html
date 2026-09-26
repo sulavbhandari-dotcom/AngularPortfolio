@@ -1,0 +1,36 @@
+<section class="section experience" id="experience">
+  <div class="container">
+    <span class="eyebrow reveal">Experience</span>
+    <h2 class="display section-title reveal">The journey</h2>
+
+    <ol class="timeline">
+      @for (job of profile.experience; track job.company) {
+        <li class="item reveal">
+          <div class="when">
+            <span class="period">{{ job.period }}</span>
+            @if (job.current) {
+              <span class="now">Now</span>
+            }
+          </div>
+          <div class="node" aria-hidden="true"></div>
+          <div class="what spotlight">
+            <div class="head">
+              <div>
+                <h3>{{ job.role }}</h3>
+                <p class="company">{{ job.company }} <span>· {{ job.type }}</span></p>
+              </div>
+              <span class="loc">{{ job.location }}</span>
+            </div>
+            @if (job.highlights.length) {
+              <ul>
+                @for (h of job.highlights; track h) {
+                  <li>{{ h }}</li>
+                }
+              </ul>
+            }
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
