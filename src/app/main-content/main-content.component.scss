@@ -78,7 +78,7 @@
 
 .headline {
   margin-top: 28px;
-  font-size: clamp(84px, 17vw, 250px);
+  font-size: clamp(60px, 17vw, 250px);
   color: var(--cream);
   .line { display: block; }
 }
@@ -206,7 +206,9 @@
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 @media (max-width: 720px) {
-  .hero { padding-top: 120px; }
+  .hero { padding-top: 110px; }
+  .status { font-size: 12px; }
+  .actions .btn { flex: 1 1 auto; justify-content: center; }
   .stats { grid-template-columns: 1fr; }
   .stat {
     padding: 20px 0;
