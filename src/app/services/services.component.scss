@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
 
-  &:hover { transform: translateY(-4px); }
   &:hover .icon { transform: rotate(90deg) scale(1.1); color: var(--gold); }
 
   h3 {
