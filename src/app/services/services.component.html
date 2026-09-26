@@ -1,0 +1,32 @@
+<section class="section services" id="services">
+  <div class="container">
+    <span class="eyebrow reveal">Services</span>
+    <h2 class="display section-title reveal">What I bring</h2>
+    <p class="intro reveal">
+      A senior technical mind on your team — as a Fractional CTO or a hands-on build partner —
+      for founders who need decisions made right, not just code shipped.
+    </p>
+
+    <div class="grid">
+      @for (service of profile.services; track service.title; let i = $index) {
+        <article class="tile spotlight reveal" [style.--d]="i * 0.08 + 's'">
+          <div class="tile-top">
+            <span class="num display">0{{ i + 1 }}</span>
+            <span class="icon" aria-hidden="true">{{ service.icon }}</span>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.body }}</p>
+        </article>
+      }
+    </div>
+
+    <div class="who reveal">
+      <span>Built for</span>
+      <ul>
+        <li>Non-technical founders shipping a first MVP</li>
+        <li>Growing startups that need architecture done right</li>
+        <li>Established businesses ready for a tech upgrade</li>
+      </ul>
+    </div>
+  </div>
+</section>

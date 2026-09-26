@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PROFILE } from '../data/profile';
 
 @Component({
   selector: 'app-introduction',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './introduction.component.scss'
 })
 export class IntroductionComponent {
-
+  profile = PROFILE;
 }

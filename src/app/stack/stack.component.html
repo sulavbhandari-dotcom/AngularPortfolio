@@ -1,0 +1,12 @@
+<section class="section stack" id="stack">
+  <div class="container">
+    <span class="eyebrow reveal">Toolkit</span>
+    <h2 class="display section-title reveal">The stack</h2>
+
+    <ul class="chips">
+      @for (tech of profile.stack; track tech; let i = $index) {
+        <li class="chip reveal" [style.--d]="i * 0.04 + 's'">{{ tech }}</li>
+      }
+    </ul>
+  </div>
+</section>

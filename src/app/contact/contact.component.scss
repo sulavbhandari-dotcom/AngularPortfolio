@@ -1,0 +1,65 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(100px, 14vw, 200px);
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.glow {
+  position: absolute;
+  left: 50%;
+  bottom: -40%;
+  width: 110vw;
+  height: 80vw;
+  max-height: 900px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(212, 167, 44, 0.22), transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.eyebrow::after { content: ''; width: 28px; height: 1px; background: currentColor; }
+
+.big {
+  margin-top: 24px;
+  font-size: clamp(76px, 15vw, 230px);
+  color: var(--cream);
+}
+
+.note {
+  margin-top: 28px;
+  max-width: 520px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.actions {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer {
+  position: relative;
+  margin-top: clamp(100px, 12vw, 160px);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+
+  a { transition: color 0.3s; &:hover { color: var(--gold); } }
+}
