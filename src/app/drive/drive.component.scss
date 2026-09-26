@@ -1,7 +1,8 @@
 .drive {
   position: relative;
   padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 8vw, 120px);
-  overflow: hidden;
+  /* clip, not hidden: hidden would make this a scroll container and freeze the view() timeline */
+  overflow: clip;
   background:
     radial-gradient(ellipse 60% 45% at 50% 75%, rgba(245, 196, 0, 0.16), transparent 70%),
     var(--bg);
@@ -57,32 +58,37 @@
   );
   mask-image: linear-gradient(90deg, transparent, #000 20%, #000 40%, transparent 70%);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 40%, transparent 70%);
-  opacity: 0.6;
+  opacity: 0.35;
 }
 
-/* Scroll-driven drive-by where the browser supports it */
 @media (max-width: 720px) {
   .road { margin-top: 24px; }
 }
 
+/*
+ * The car drifts gently upward as the section scrolls past, and its glow
+ * tightens a little as it "lifts". Uses a native scroll timeline where
+ * supported; drive.component.ts sets --rise / --glow as a fallback.
+ */
+.car { translate: 0 var(--rise, 0px); }
+.shadow {
+  scale: var(--glow, 1);
+  opacity: calc(0.6 + (var(--glow, 1) - 0.85) * 2);
+}
+
 @supports (animation-timeline: view()) {
   .car {
-    animation: drive-in linear both;
+    animation: drive-rise linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 55%;
+    animation-range: cover 0% cover 100%;
   }
-  .speed {
-    animation: streak linear both;
+  .shadow {
+    animation: drive-glow linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 55%;
+    animation-range: cover 0% cover 100%;
   }
 }
-@keyframes drive-in {
-  from { transform: translateX(70%) scale(0.92); opacity: 0; }
-  40% { opacity: 1; }
-  to { transform: translateX(0) scale(1); opacity: 1; }
-}
-@keyframes streak {
-  from { transform: translateX(60%); opacity: 0; }
-  to { transform: translateX(0); opacity: 0.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .car, .shadow { animation: none; translate: none; scale: none; }
 }
