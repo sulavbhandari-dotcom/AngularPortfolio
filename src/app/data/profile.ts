@@ -93,7 +93,7 @@ export const PROFILE = {
       role: 'UI/UX Designer',
       company: 'Freelance',
       type: 'Self-employed',
-      period: '2025 — Present',
+      period: '2021 — Present',
       location: 'Kathmandu, Nepal · Remote',
       current: true,
       highlights: [
@@ -103,7 +103,7 @@ export const PROFILE = {
       ],
     },
     {
-      role: 'Member',
+      role: 'Designer',
       company: 'GDSC KIIT',
       type: 'Part-time',
       period: 'Oct 2022 — Oct 2024',
@@ -111,7 +111,7 @@ export const PROFILE = {
       highlights: [],
     },
     {
-      role: 'Domain Lead',
+      role: 'Design Domain Lead',
       company: 'National Service Scheme',
       type: 'Part-time',
       period: 'Sep 2022 — Oct 2024',
