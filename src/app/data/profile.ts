@@ -89,9 +89,9 @@ export const PROFILE = {
     {
       name: 'DMS Lite',
       url: 'https://dmslite.bnl.com.np',
-      summary: 'A lightweight document management system with a clean, focused interface that makes uploading, organising and finding documents quick for everyday teams.',
+      summary: 'A lightweight distributor management system that turns orders, stock and dealer tracking into clear, fast dashboards for everyday sales and distribution teams.',
       role: 'UI/UX Design',
-      tags: ['Web App', 'Dashboard', 'Enterprise'],
+      tags: ['Web App', 'Dashboard', 'B2B'],
     },
   ] as Project[],
 
