@@ -106,6 +106,8 @@ export const PROFILE = {
 
   // Sample mockups — replace with real exports in public/designs/. `shape` only sizes image-less placeholders.
   designs: [
+    { title: 'Anand Bandages — website design', category: 'Web', image: 'designs/anand-bandages-website.jpg' },
+    { title: 'Naresh Dry Fruits — store landing page', category: 'Web', image: 'designs/naresh-dryfruit-store.jpg' },
     { title: 'Fitness tracker app', category: 'Mobile', image: 'designs/fitness-app.svg' },
     { title: 'Yatra — travel landing page', category: 'Web', image: 'designs/travel-landing.svg' },
     { title: 'Chiya Ghar brand identity', category: 'Branding', image: 'designs/tea-brand.svg' },

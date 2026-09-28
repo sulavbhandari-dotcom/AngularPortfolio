@@ -20,6 +20,7 @@ export class DesignsComponent {
   });
 
   openIndex = signal<number | null>(null);
+  long = signal(false);
   current = computed(() => {
     const i = this.openIndex();
     return i === null ? null : this.visible()[i];
@@ -42,13 +43,22 @@ export class DesignsComponent {
 
   onClosed() {
     this.openIndex.set(null);
+    this.long.set(false);
   }
 
   step(delta: number) {
     const i = this.openIndex();
     if (i === null) return;
     const n = this.visible().length;
+    this.long.set(false);
     this.openIndex.set((i + delta + n) % n);
+    this.dialog().nativeElement.scrollTop = 0;
+  }
+
+  // Full-page designs are shown at readable width and scroll, instead of shrinking to fit.
+  onImageLoad(e: Event) {
+    const img = e.target as HTMLImageElement;
+    this.long.set(img.naturalHeight / img.naturalWidth > 1.6);
   }
 
   onKey(e: KeyboardEvent) {

@@ -36,11 +36,11 @@
     </div>
   </div>
 
-  <dialog #dialog class="lightbox" (close)="onClosed()" (keydown)="onKey($event)" (click)="onBackdrop($event)" aria-label="Design preview">
+  <dialog #dialog class="lightbox" [class.long]="long()" (close)="onClosed()" (keydown)="onKey($event)" (click)="onBackdrop($event)" aria-label="Design preview">
     @if (current(); as d) {
       <figure>
         @if (d.image) {
-          <img [src]="d.image" [alt]="d.title">
+          <img [src]="d.image" [alt]="d.title" (load)="onImageLoad($event)">
         } @else {
           <span class="ph big" [attr.data-shape]="shapeOf(d)" aria-hidden="true">
             <span class="ph-label">{{ d.category }}</span>
