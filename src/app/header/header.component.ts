@@ -16,6 +16,7 @@ export class HeaderComponent {
 
   links = [
     { href: '#about', label: 'About' },
+    { href: '#work', label: 'Work' },
     { href: '#services', label: 'Services' },
     { href: '#experience', label: 'Experience' },
     { href: '#stack', label: 'Stack' },

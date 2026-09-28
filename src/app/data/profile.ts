@@ -16,16 +16,25 @@ export interface Service {
   icon: string;
 }
 
+export interface Project {
+  name: string;
+  url: string;
+  summary: string;
+  role: string;
+  tags: string[];
+  image?: string;
+}
+
 export const PROFILE = {
   name: 'Sulav Bhandari',
-  headline: 'Technical Build Partner',
-  pitch: 'I help startups & SMEs ship scalable products — without the full-time cost.',
+  headline: 'UI/UX Designer who codes',
+  pitch: 'I design interfaces people love to use — and because I also engineer, every design is built to ship.',
   location: 'Kathmandu, Nepal',
   availability: 'Open to work · On-site · Hybrid · Remote',
   linkedin: 'https://www.linkedin.com/in/sulav-bhandari-395a79184/',
   github: 'https://github.com/sulavbhandari-dotcom',
 
-  roles: ['Fractional CTO', 'Technical Build Partner', 'AI Development Partner', '.NET Engineer'],
+  roles: ['UI/UX Designer', 'Product Designer', 'Design Engineer', 'Frontend Developer'],
 
   stats: [
     { value: '10+', label: 'Business clients on POS & ERP modules' },
@@ -34,33 +43,50 @@ export const PROFILE = {
   ],
 
   about: [
-    'Founders hire me when they need a senior technical mind, but not a full-time CTO salary.',
-    "Whether you're a non-technical founder trying to ship your first MVP, a growing startup that needs architectural decisions made right, or an established business needing a tech upgrade — I step in as your Fractional CTO or hands-on technical build partner.",
-    "I've worked with early-stage startups across Nepal and Australia, delivered real products, and understand what it actually takes to go from idea to production.",
+    "I'm a UI/UX designer who designs with the build in mind.",
+    'I turn ideas into clear, usable interfaces — from research and wireframes to polished UI and interactive prototypes in Figma, with Photoshop and Illustrator for visuals.',
+    "My background as a software engineer across startups in Nepal and Australia means every design I hand over is realistic to build, easy for developers to pick up, and made to ship.",
   ],
 
   services: [
     {
       icon: '◆',
-      title: 'Product & Architecture Strategy',
-      body: 'Getting the foundations right from day one — system design, data models and a roadmap that scales with the business.',
+      title: 'UX Research & Wireframes',
+      body: 'Understanding your users and mapping the flows that matter — so the structure is right before a single pixel is polished.',
     },
     {
       icon: '⌘',
-      title: 'Full-Stack Leadership',
-      body: 'Hands-on development leadership across .NET, cloud and APIs. I write the code and set the bar for the team.',
+      title: 'UI Design & Design Systems',
+      body: 'Clean, consistent interfaces built on reusable components, type and colour — so the product stays coherent as it grows.',
     },
     {
       icon: '◎',
-      title: 'Vendors, Hiring & Team Structure',
-      body: 'Choosing the right partners, hiring the right engineers and shaping a team that ships without you babysitting it.',
+      title: 'Interactive Prototyping',
+      body: 'Clickable Figma prototypes to test ideas with real people and align stakeholders before development starts.',
     },
     {
       icon: '✦',
-      title: 'Honest Technical Advice',
-      body: 'Tech decisions aligned with your business goals — no buzzwords, no over-engineering, no vendor lock-in surprises.',
+      title: 'Design-to-Dev Handoff',
+      body: "Specs, assets and components developers can actually use — I'm an engineer too, so nothing gets lost in translation.",
     },
   ] as Service[],
+
+  projects: [
+    {
+      name: 'MM Silver',
+      url: 'https://www.mmsilver.in',
+      summary: 'A storefront for a silver jewellery brand, designed so product browsing feels calm and premium and the craftsmanship stays the focus.',
+      role: 'UI/UX Design',
+      tags: ['E-commerce', 'Web', 'Figma'],
+    },
+    {
+      name: 'KMC SEEP Mela 2082',
+      url: 'https://kmc.seepmela.com/',
+      summary: "The event platform for Kathmandu Metropolitan City's SEEP Mela 2082: a clear, accessible interface that helps visitors and participants find what they need fast.",
+      role: 'UI/UX Design',
+      tags: ['Event Platform', 'Public Sector', 'Web'],
+    },
+  ] as Project[],
 
   experience: [
     {
@@ -109,8 +135,9 @@ export const PROFILE = {
   },
 
   stack: [
+    'Figma', 'Photoshop', 'Illustrator', 'UI / UX', 'Prototyping', 'Design Systems',
     '.NET', 'C#', 'ASP.NET Core', 'REST APIs', 'SQL', 'Cloud',
-    'System Design', 'Angular', 'TypeScript', 'AI / ML', 'AR', 'UI / UX',
+    'System Design', 'Angular', 'TypeScript', 'AI / ML', 'AR',
   ],
 
   sideQuest: 'Currently exploring an AR-based tourist guide for Nepal.',

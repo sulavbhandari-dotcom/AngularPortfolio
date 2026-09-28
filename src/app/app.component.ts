@@ -3,6 +3,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ServicesComponent } from './services/services.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { DriveComponent } from './drive/drive.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { StackComponent } from './stack/stack.component';
@@ -14,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     MainContentComponent,
     IntroductionComponent,
+    ProjectsComponent,
     ServicesComponent,
     DriveComponent,
     ExperienceComponent,

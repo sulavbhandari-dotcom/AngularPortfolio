@@ -1,0 +1,42 @@
+<section class="section work" id="work">
+  <div class="container">
+    <span class="eyebrow reveal">Selected work</span>
+    <h2 class="display section-title reveal">Projects</h2>
+    <p class="intro reveal">A few interfaces I've designed — live and in the hands of real users.</p>
+
+    <div class="grid">
+      @for (project of profile.projects; track project.url; let i = $index) {
+        <a
+          class="card spotlight reveal"
+          data-tilt
+          [href]="project.url"
+          target="_blank"
+          rel="noopener"
+          [style.--d]="i * 0.08 + 's'"
+          [attr.aria-label]="project.name + ' — visit site (opens in new tab)'"
+        >
+          <div class="media">
+            @if (project.image) {
+              <img [src]="project.image" [alt]="project.name + ' preview'" loading="lazy">
+            } @else {
+              <span class="initials display" aria-hidden="true">{{ initials(project.name) }}</span>
+            }
+            <span class="num display" aria-hidden="true">0{{ i + 1 }}</span>
+          </div>
+
+          <div class="body">
+            <span class="role">{{ project.role }}</span>
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.summary }}</p>
+            <ul class="tags">
+              @for (tag of project.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+            <span class="visit">{{ host(project.url) }} <span class="arrow">↗</span></span>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>
