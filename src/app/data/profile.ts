@@ -108,6 +108,8 @@ export const PROFILE = {
   designs: [
     { title: 'Anand Bandages — website design', category: 'Web', image: 'designs/anand-bandages-website.jpg' },
     { title: 'Naresh Dry Fruits — store landing page', category: 'Web', image: 'designs/naresh-dryfruit-store.jpg' },
+    { title: 'Home & Glory — e-commerce website', category: 'Web', image: 'designs/home-and-glory-website.jpg' },
+    { title: 'Study in Japan — Instagram post', category: 'Visual', image: 'designs/instagram-post-3.jpg' },
     { title: 'Fitness tracker app', category: 'Mobile', image: 'designs/fitness-app.svg' },
     { title: 'Yatra — travel landing page', category: 'Web', image: 'designs/travel-landing.svg' },
     { title: 'Chiya Ghar brand identity', category: 'Branding', image: 'designs/tea-brand.svg' },
