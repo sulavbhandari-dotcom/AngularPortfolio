@@ -90,26 +90,17 @@ export const PROFILE = {
 
   experience: [
     {
-      role: 'Co-Founder',
-      company: 'Yeti Code Crew',
-      type: 'Full-time',
-      period: 'Jun 2025 — Present',
-      location: 'Kathmandu, Nepal · On-site',
+      role: 'UI/UX Designer',
+      company: 'Freelance',
+      type: 'Self-employed',
+      period: '2025 — Present',
+      location: 'Kathmandu, Nepal · Remote',
       current: true,
       highlights: [
-        'Led backend architecture decisions for enterprise-grade POS and ERP modules serving 10+ business clients',
-        'Designed scalable APIs and database schemas, reducing system latency by 20%',
-        'Primary technical decision-maker for sprint planning and system design reviews',
+        'Designed the MM Silver storefront and the KMC SEEP Mela 2082 event platform, from wireframes to final UI',
+        'Build user flows, UI kits and interactive prototypes in Figma, with visuals in Photoshop and Illustrator',
+        'Hand off dev-ready designs that developers can build without guesswork',
       ],
-    },
-    {
-      role: 'Software Engineer',
-      company: 'Uranus Tech Nepal Pvt. Ltd.',
-      type: 'Full-time',
-      period: 'Apr 2025 — Present',
-      location: 'Kathmandu, Nepal · On-site',
-      current: true,
-      highlights: [],
     },
     {
       role: 'Member',
