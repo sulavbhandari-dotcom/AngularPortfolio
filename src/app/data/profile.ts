@@ -86,6 +86,13 @@ export const PROFILE = {
       role: 'UI/UX Design',
       tags: ['Event Platform', 'Public Sector', 'Web'],
     },
+    {
+      name: 'DMS Lite',
+      url: 'https://dmslite.bnl.com.np',
+      summary: 'A lightweight document management system with a clean, focused interface that makes uploading, organising and finding documents quick for everyday teams.',
+      role: 'UI/UX Design',
+      tags: ['Web App', 'Dashboard', 'Enterprise'],
+    },
   ] as Project[],
 
   experience: [
