@@ -37,9 +37,9 @@ export const PROFILE = {
   roles: ['UI/UX Designer', 'Product Designer', 'Design Engineer', 'Frontend Developer'],
 
   stats: [
-    { value: '10+', label: 'Business clients on POS & ERP modules' },
-    { value: '−20%', label: 'System latency through API & schema design' },
-    { value: '2', label: 'Countries of startups shipped — Nepal & Australia' },
+    { value: '2+', label: 'Live products designed — e-commerce & public sector' },
+    { value: '3', label: 'Core design tools — Figma, Photoshop & Illustrator' },
+    { value: '100%', label: 'Dev-ready designs — built by a designer who codes' },
   ],
 
   about: [
