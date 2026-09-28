@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1200" height="750" fill="#f5f7fb"/>
+  <rect width="220" height="750" fill="#101828"/>
+  <rect x="28" y="32" width="36" height="36" rx="10" fill="#6366f1"/><text x="76" y="58" fill="#fff" font-size="20" font-weight="700">Pulse</text>
+  <rect x="16" y="110" width="188" height="44" rx="10" fill="#1e293b"/><text x="44" y="138" fill="#fff" font-size="15">Overview</text>
+  <text x="44" y="192" fill="#94a3b8" font-size="15">Orders</text><text x="44" y="236" fill="#94a3b8" font-size="15">Distributors</text><text x="44" y="280" fill="#94a3b8" font-size="15">Inventory</text><text x="44" y="324" fill="#94a3b8" font-size="15">Reports</text>
+  <text x="260" y="66" fill="#101828" font-size="28" font-weight="700">Sales overview</text>
+  <text x="260" y="94" fill="#64748b" font-size="15">Last 30 days · All regions</text>
+  <rect x="980" y="40" width="180" height="44" rx="10" fill="#6366f1"/><text x="1070" y="68" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">Export report</text>
+  <g font-size="14">
+    <rect x="260" y="124" width="280" height="120" rx="16" fill="#fff"/><text x="284" y="160" fill="#64748b">Revenue</text><text x="284" y="202" fill="#101828" font-size="30" font-weight="700">Rs 48.2L</text><text x="284" y="228" fill="#16a34a">▲ 12.4%</text>
+    <rect x="560" y="124" width="280" height="120" rx="16" fill="#fff"/><text x="584" y="160" fill="#64748b">Orders</text><text x="584" y="202" fill="#101828" font-size="30" font-weight="700">3,184</text><text x="584" y="228" fill="#16a34a">▲ 8.1%</text>
+    <rect x="860" y="124" width="300" height="120" rx="16" fill="#fff"/><text x="884" y="160" fill="#64748b">Active distributors</text><text x="884" y="202" fill="#101828" font-size="30" font-weight="700">142</text><text x="884" y="228" fill="#dc2626">▼ 2.0%</text>
+  </g>
+  <rect x="260" y="264" width="580" height="446" rx="16" fill="#fff"/>
+  <text x="284" y="304" fill="#101828" font-size="17" font-weight="600">Monthly revenue</text>
+  <g fill="#e0e7ff">
+    <rect x="300" y="520" width="34" height="150" rx="6"/><rect x="360" y="480" width="34" height="190" rx="6"/><rect x="420" y="500" width="34" height="170" rx="6"/><rect x="480" y="430" width="34" height="240" rx="6"/><rect x="540" y="450" width="34" height="220" rx="6"/><rect x="600" y="400" width="34" height="270" rx="6"/><rect x="660" y="420" width="34" height="250" rx="6"/>
+  </g>
+  <rect x="720" y="350" width="34" height="320" rx="6" fill="#6366f1"/>
+  <path d="M317 500 L377 460 L437 475 L497 405 L557 425 L617 375 L677 390 L737 330" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="860" y="264" width="300" height="446" rx="16" fill="#fff"/>
+  <text x="884" y="304" fill="#101828" font-size="17" font-weight="600">Top regions</text>
+  <circle cx="1010" cy="430" r="90" fill="none" stroke="#e0e7ff" stroke-width="30"/>
+  <circle cx="1010" cy="430" r="90" fill="none" stroke="#6366f1" stroke-width="30" stroke-dasharray="260 566" transform="rotate(-90 1010 430)"/>
+  <circle cx="1010" cy="430" r="90" fill="none" stroke="#f59e0b" stroke-width="30" stroke-dasharray="150 566" stroke-dashoffset="-260" transform="rotate(-90 1010 430)"/>
+  <g font-size="14" fill="#334155">
+    <circle cx="892" cy="585" r="6" fill="#6366f1"/><text x="908" y="590">Bagmati</text><text x="1130" y="590" text-anchor="end">46%</text>
+    <circle cx="892" cy="625" r="6" fill="#f59e0b"/><text x="908" y="630">Gandaki</text><text x="1130" y="630" text-anchor="end">27%</text>
+    <circle cx="892" cy="665" r="6" fill="#e0e7ff"/><text x="908" y="670">Others</text><text x="1130" y="670" text-anchor="end">27%</text>
+  </g>
+</svg>

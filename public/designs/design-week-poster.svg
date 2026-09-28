@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 880" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="600" height="880" fill="#ece6d9"/>
+  <circle cx="420" cy="260" r="210" fill="#e4572e"/>
+  <rect x="20" y="215" width="330" height="420" fill="#17255a"/>
+  <path d="M350 635 L570 635 L570 415Z" fill="#f2c14e"/>
+  <circle cx="185" cy="470" r="90" fill="none" stroke="#ece6d9" stroke-width="14"/>
+  <circle cx="185" cy="470" r="40" fill="#e4572e"/>
+  <text x="40" y="96" fill="#17255a" font-size="22" font-weight="700" letter-spacing="4">KATHMANDU</text>
+  <text x="36" y="200" fill="#17255a" font-size="112" font-weight="900" letter-spacing="-4">DESIGN</text>
+  <text x="36" y="300" fill="#ece6d9" font-size="112" font-weight="900" letter-spacing="-4">WEEK</text>
+  <text x="40" y="720" fill="#17255a" font-size="44" font-weight="800">12—18 MAGH</text>
+  <text x="40" y="760" fill="#17255a" font-size="20">Talks · Workshops · Exhibitions</text>
+  <line x1="40" y1="800" x2="560" y2="800" stroke="#17255a" stroke-width="2"/>
+  <text x="40" y="840" fill="#17255a" font-size="16" font-weight="600">Patan Durbar Square</text>
+  <text x="560" y="840" text-anchor="end" fill="#17255a" font-size="16" font-weight="600">Free entry</text>
+</svg>

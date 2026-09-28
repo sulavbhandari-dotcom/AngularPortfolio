@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 880" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="600" height="880" fill="#f4fbf7"/>
+  <text x="540" y="70" text-anchor="end" fill="#6b8f7c" font-size="18" font-weight="600">Skip</text>
+  <circle cx="300" cy="320" r="190" fill="#d6f2e3"/>
+  <circle cx="300" cy="320" r="130" fill="#b2e6ca"/>
+  <rect x="190" y="230" width="220" height="150" rx="22" fill="#0f5132" transform="rotate(-8 300 305)"/>
+  <rect x="210" y="250" width="220" height="150" rx="22" fill="#1f8a5b"/>
+  <rect x="232" y="274" width="44" height="32" rx="7" fill="#f7d774"/>
+  <text x="232" y="350" fill="#e6f7ee" font-size="18" letter-spacing="3">•••• 4821</text>
+  <text x="232" y="380" fill="#b2e6ca" font-size="14">SULAV B.</text>
+  <circle cx="440" cy="190" r="34" fill="#f7d774"/><text x="440" y="202" text-anchor="middle" fill="#0f5132" font-size="32" font-weight="800">₨</text>
+  <circle cx="150" cy="430" r="22" fill="#1f8a5b"/><path d="M140 430l7 7 14-15" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="590" text-anchor="middle" fill="#0f2e20" font-size="36" font-weight="800">Pay anyone,</text>
+  <text x="300" y="636" text-anchor="middle" fill="#0f2e20" font-size="36" font-weight="800">in a single tap.</text>
+  <text x="300" y="682" text-anchor="middle" fill="#6b8f7c" font-size="18">Send money, split bills and pay merchants</text>
+  <text x="300" y="708" text-anchor="middle" fill="#6b8f7c" font-size="18">across Nepal — instantly.</text>
+  <rect x="262" y="744" width="28" height="8" rx="4" fill="#1f8a5b"/><circle cx="306" cy="748" r="4" fill="#b2e6ca"/><circle cx="322" cy="748" r="4" fill="#b2e6ca"/>
+  <rect x="48" y="784" width="504" height="64" rx="32" fill="#1f8a5b"/>
+  <text x="300" y="824" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">Get started</text>
+</svg>

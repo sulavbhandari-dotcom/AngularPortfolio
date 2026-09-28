@@ -104,14 +104,14 @@ export const PROFILE = {
     },
   ] as Project[],
 
-  // Drop exports into public/designs/ and set `image: 'designs/<file>'`; `shape` only sizes placeholders.
+  // Sample mockups — replace with real exports in public/designs/. `shape` only sizes image-less placeholders.
   designs: [
-    { title: 'Mobile concept', category: 'Mobile', shape: 'tall' },
-    { title: 'Web landing page', category: 'Web', shape: 'wide' },
-    { title: 'Brand identity', category: 'Branding', shape: 'square' },
-    { title: 'Dashboard study', category: 'Web', shape: 'wide' },
-    { title: 'Poster', category: 'Visual', shape: 'tall' },
-    { title: 'App onboarding', category: 'Mobile', shape: 'tall' },
+    { title: 'Fitness tracker app', category: 'Mobile', image: 'designs/fitness-app.svg' },
+    { title: 'Yatra — travel landing page', category: 'Web', image: 'designs/travel-landing.svg' },
+    { title: 'Chiya Ghar brand identity', category: 'Branding', image: 'designs/tea-brand.svg' },
+    { title: 'Pulse sales dashboard', category: 'Web', image: 'designs/sales-dashboard.svg' },
+    { title: 'Kathmandu Design Week poster', category: 'Visual', image: 'designs/design-week-poster.svg' },
+    { title: 'Wallet app onboarding', category: 'Mobile', image: 'designs/wallet-onboarding.svg' },
   ] as Design[],
 
   experience: [

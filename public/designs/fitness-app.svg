@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 880" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1f3b"/><stop offset="1" stop-color="#0d1024"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffc15e"/></linearGradient>
+  </defs>
+  <rect width="600" height="880" fill="url(#bg)"/>
+  <text x="48" y="92" fill="#8b90b8" font-size="20">Good morning,</text>
+  <text x="48" y="130" fill="#fff" font-size="34" font-weight="700">Aarav</text>
+  <circle cx="528" cy="108" r="28" fill="#2c3160"/><circle cx="528" cy="100" r="10" fill="#ffc15e"/><path d="M510 124a18 12 0 0 1 36 0" fill="#ffc15e"/>
+  <rect x="40" y="176" width="520" height="300" rx="32" fill="#232850"/>
+  <circle cx="190" cy="326" r="96" fill="none" stroke="#2f3566" stroke-width="22"/>
+  <circle cx="190" cy="326" r="96" fill="none" stroke="url(#ring)" stroke-width="22" stroke-linecap="round" stroke-dasharray="440 603" transform="rotate(-90 190 326)"/>
+  <text x="190" y="322" text-anchor="middle" fill="#fff" font-size="40" font-weight="700">7,420</text>
+  <text x="190" y="352" text-anchor="middle" fill="#8b90b8" font-size="16">of 10,000 steps</text>
+  <text x="330" y="270" fill="#8b90b8" font-size="15">Calories</text><text x="330" y="302" fill="#fff" font-size="28" font-weight="700">512 kcal</text>
+  <text x="330" y="350" fill="#8b90b8" font-size="15">Active</text><text x="330" y="382" fill="#fff" font-size="28" font-weight="700">48 min</text>
+  <text x="40" y="530" fill="#fff" font-size="22" font-weight="600">Today's workouts</text>
+  <rect x="40" y="556" width="520" height="104" rx="24" fill="#232850"/>
+  <rect x="60" y="576" width="64" height="64" rx="18" fill="#ff7a59"/><path d="M80 608h24M84 598v20M100 598v20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <text x="144" y="602" fill="#fff" font-size="20" font-weight="600">Strength · Upper body</text><text x="144" y="630" fill="#8b90b8" font-size="16">35 min · 6 exercises</text>
+  <rect x="40" y="676" width="520" height="104" rx="24" fill="#232850"/>
+  <rect x="60" y="696" width="64" height="64" rx="18" fill="#5ec8ff"/><circle cx="92" cy="728" r="14" fill="none" stroke="#fff" stroke-width="5"/>
+  <text x="144" y="722" fill="#fff" font-size="20" font-weight="600">Morning run</text><text x="144" y="750" fill="#8b90b8" font-size="16">5.2 km · Ratna Park loop</text>
+  <rect x="40" y="808" width="520" height="56" rx="28" fill="#161a36"/>
+  <circle cx="130" cy="836" r="7" fill="#ffc15e"/><circle cx="250" cy="836" r="7" fill="#4a5088"/><circle cx="370" cy="836" r="7" fill="#4a5088"/><circle cx="480" cy="836" r="7" fill="#4a5088"/>
+</svg>

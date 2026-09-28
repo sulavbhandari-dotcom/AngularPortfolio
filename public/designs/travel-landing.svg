@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd8b5"/><stop offset=".55" stop-color="#ff9f7a"/><stop offset="1" stop-color="#6c4a8e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sky)"/>
+  <circle cx="880" cy="250" r="90" fill="#fff4de" opacity=".85"/>
+  <path d="M0 520 L180 330 L300 430 L470 230 L640 450 L760 360 L930 520 L1060 400 L1200 500 V750 H0Z" fill="#8a5a9c"/>
+  <path d="M470 230 L520 290 L495 285 L470 310 L445 282 L420 290Z" fill="#fff"/>
+  <path d="M0 600 L220 470 L380 560 L560 440 L760 580 L960 470 L1200 590 V750 H0Z" fill="#4b3470"/>
+  <path d="M0 680 L260 600 L520 670 L820 590 L1200 690 V750 H0Z" fill="#2a1d45"/>
+  <text x="64" y="72" fill="#2a1d45" font-size="26" font-weight="800">yatra.</text>
+  <text x="620" y="70" fill="#2a1d45" font-size="17">Destinations</text><text x="760" y="70" fill="#2a1d45" font-size="17">Treks</text><text x="850" y="70" fill="#2a1d45" font-size="17">Stories</text>
+  <rect x="950" y="42" width="170" height="46" rx="23" fill="#2a1d45"/><text x="1035" y="71" text-anchor="middle" fill="#fff" font-size="16" font-weight="600">Plan a trip</text>
+  <text x="64" y="200" fill="#2a1d45" font-size="72" font-weight="800">Find your</text>
+  <text x="64" y="280" fill="#2a1d45" font-size="72" font-weight="800">Himalayan high.</text>
+  <text x="66" y="330" fill="#4b3470" font-size="21">Curated treks, homestays and guides across Nepal.</text>
+  <rect x="64" y="370" width="560" height="68" rx="34" fill="#fff"/>
+  <text x="100" y="411" fill="#8a7a9c" font-size="18">Where to? Annapurna, Everest…</text>
+  <rect x="470" y="378" width="146" height="52" rx="26" fill="#ff6b4a"/><text x="543" y="411" text-anchor="middle" fill="#fff" font-size="17" font-weight="600">Search</text>
+</svg>
