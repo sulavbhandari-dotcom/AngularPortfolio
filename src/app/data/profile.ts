@@ -89,9 +89,9 @@ export const PROFILE = {
     {
       name: 'DMS Lite',
       url: 'https://dmslite.bnl.com.np',
-      summary: 'A lightweight distributor management system that turns orders, stock and dealer tracking into clear, fast dashboards for everyday sales and distribution teams.',
+      summary: 'A reporting application for distributor management that turns sales, stock and distributor data into clear, easy-to-read reports and dashboards.',
       role: 'UI/UX Design',
-      tags: ['Web App', 'Dashboard', 'B2B'],
+      tags: ['Reporting', 'Dashboard', 'B2B'],
     },
   ] as Project[],
 
