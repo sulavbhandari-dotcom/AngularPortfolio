@@ -1,0 +1,61 @@
+<section class="section designs" id="designs">
+  <div class="container">
+    <span class="eyebrow reveal">Explorations</span>
+    <h2 class="display section-title reveal">Beyond the live sites</h2>
+    <p class="intro reveal">Concepts, UI studies and visual work from Figma, Photoshop and Illustrator.</p>
+
+    <div class="filters reveal" role="group" aria-label="Filter designs">
+      <button type="button" class="chip" [class.on]="filter() === 'All'" [attr.aria-pressed]="filter() === 'All'" (click)="setFilter('All')">All</button>
+      @for (c of categories; track c) {
+        <button type="button" class="chip" [class.on]="filter() === c" [attr.aria-pressed]="filter() === c" (click)="setFilter(c)">{{ c }}</button>
+      }
+    </div>
+
+    <div class="reveal">
+      @for (f of [filter()]; track f) {
+        <ul class="masonry">
+          @for (d of visible(); track d.title; let i = $index) {
+            <li class="tile" [style.--i]="i">
+              <button type="button" class="shot spotlight" (click)="open(i)" [attr.aria-label]="'View ' + d.title">
+                @if (d.image) {
+                  <img [src]="d.image" [alt]="d.title" loading="lazy">
+                } @else {
+                  <span class="ph" [attr.data-shape]="shapeOf(d)" aria-hidden="true">
+                    <span class="ph-label">{{ d.category }}</span>
+                  </span>
+                }
+                <span class="caption">
+                  <strong>{{ d.title }}</strong>
+                  <span>{{ d.category }}</span>
+                </span>
+              </button>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+
+  <dialog #dialog class="lightbox" (close)="onClosed()" (keydown)="onKey($event)" (click)="onBackdrop($event)" aria-label="Design preview">
+    @if (current(); as d) {
+      <figure>
+        @if (d.image) {
+          <img [src]="d.image" [alt]="d.title">
+        } @else {
+          <span class="ph big" [attr.data-shape]="shapeOf(d)" aria-hidden="true">
+            <span class="ph-label">{{ d.category }}</span>
+          </span>
+        }
+        <figcaption>
+          <strong>{{ d.title }}</strong>
+          <span>{{ d.category }} · {{ openIndex()! + 1 }} / {{ visible().length }}</span>
+        </figcaption>
+      </figure>
+      <button type="button" class="lb-btn lb-close" (click)="close()" aria-label="Close">✕</button>
+      @if (visible().length > 1) {
+        <button type="button" class="lb-btn lb-prev" (click)="step(-1)" aria-label="Previous design">←</button>
+        <button type="button" class="lb-btn lb-next" (click)="step(1)" aria-label="Next design">→</button>
+      }
+    }
+  </dialog>
+</section>

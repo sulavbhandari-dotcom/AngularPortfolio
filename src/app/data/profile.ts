@@ -25,6 +25,15 @@ export interface Project {
   image?: string;
 }
 
+export type DesignCategory = 'Mobile' | 'Web' | 'Branding' | 'Visual';
+
+export interface Design {
+  title: string;
+  category: DesignCategory;
+  image?: string;
+  shape?: 'tall' | 'wide' | 'square';
+}
+
 export const PROFILE = {
   name: 'Sulav Bhandari',
   headline: 'UI/UX Designer who codes',
@@ -94,6 +103,16 @@ export const PROFILE = {
       tags: ['Reporting', 'Dashboard', 'B2B'],
     },
   ] as Project[],
+
+  // Drop exports into public/designs/ and set `image: 'designs/<file>'`; `shape` only sizes placeholders.
+  designs: [
+    { title: 'Mobile concept', category: 'Mobile', shape: 'tall' },
+    { title: 'Web landing page', category: 'Web', shape: 'wide' },
+    { title: 'Brand identity', category: 'Branding', shape: 'square' },
+    { title: 'Dashboard study', category: 'Web', shape: 'wide' },
+    { title: 'Poster', category: 'Visual', shape: 'tall' },
+    { title: 'App onboarding', category: 'Mobile', shape: 'tall' },
+  ] as Design[],
 
   experience: [
     {

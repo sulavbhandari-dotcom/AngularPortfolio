@@ -4,6 +4,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ServicesComponent } from './services/services.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { DesignsComponent } from './designs/designs.component';
 import { DriveComponent } from './drive/drive.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { StackComponent } from './stack/stack.component';
@@ -16,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
     MainContentComponent,
     IntroductionComponent,
     ProjectsComponent,
+    DesignsComponent,
     ServicesComponent,
     DriveComponent,
     ExperienceComponent,
