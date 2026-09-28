@@ -53,7 +53,7 @@
   <div class="marquee-track">
     @for (n of [0, 1]; track n) {
       <div class="marquee-group">
-        @for (item of profile.stack; track item) {
+        @for (item of profile.marquee; track item) {
           <span>{{ item }}</span><span class="star">✦</span>
         }
       </div>

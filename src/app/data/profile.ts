@@ -155,6 +155,11 @@ export const PROFILE = {
     location: 'Bhubaneswar, India',
   },
 
+  marquee: [
+    'UI / UX', 'Figma', 'Photoshop', 'Illustrator', 'UX Research', 'Wireframing',
+    'Prototyping', 'Design Systems', 'Typography', 'Branding', 'Visual Design', 'Interaction Design',
+  ],
+
   stack: [
     'Figma', 'Photoshop', 'Illustrator', 'UI / UX', 'Prototyping', 'Design Systems',
     '.NET', 'C#', 'ASP.NET Core', 'REST APIs', 'SQL', 'Cloud',
