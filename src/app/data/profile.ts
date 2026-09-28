@@ -107,7 +107,7 @@ export const PROFILE = {
   // Sample mockups — replace with real exports in public/designs/. `shape` only sizes image-less placeholders.
   designs: [
     { title: 'Anand Bandages — website design', category: 'Web', image: 'designs/anand-bandages-website.jpg' },
-    { title: 'Naresh Dry Fruits — store landing page', category: 'Web', image: 'designs/naresh-dryfruit-store.jpg' },
+    { title: 'Naresh Dry Fruits — store landing page', category: 'Web', image: 'designs/naresh-dryfruit-mockup.jpg' },
     { title: 'Home & Glory — e-commerce website', category: 'Web', image: 'designs/home-and-glory-website.jpg' },
     { title: 'Study in Japan — Instagram post', category: 'Visual', image: 'designs/instagram-post-3.jpg' },
     { title: 'Fitness tracker app', category: 'Mobile', image: 'designs/fitness-app.svg' },
